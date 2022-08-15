@@ -12,7 +12,7 @@
     <form class="w-75 mx-auto">
         <p class="mt-3">雇用形態</p>
         <div>
-            <input class="form-control w-100 mt-1" name="name" placeholder="" required>
+            <input class="form-control w-100 mt-1" name="worktype" placeholder="" required>
         </div>
         <p class="mt-3">希望勤務地</p>
         <div>
@@ -63,12 +63,10 @@
 
         $(function () {
             $('form').submit(function () {
-                const name    = $('input[name="name"]').val();
-                const udetate = $('input[name="udetate"]').val();
-                const fukkin  = $('input[name="fukkin"]').val();
-                const haikin  = $('input[name="haikin"]').val();
-                const sukuwat = $('input[name="sukuwat"]').val();
-                const msg = `${name}\n${udetate}\n${fukkin}\n${haikin}\n${sukuwat}`;
+                const worktype    = $('input[name="worktype"]').val();
+                const area = $('input[name="area"]').val();
+                const subject  = $('input[name="subject"]').val();
+                const msg = `${worktype}\n${area}\n${subject}`;
                 sendText(msg);
                 return false;
             });
